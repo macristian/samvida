@@ -1,0 +1,9 @@
+.samvida, .slogam {
+    font-family: 'Blacker Sans Display';
+    src: local('Blacker Sans Display Regular'), local('Blacker-Sans-Display-Regular'),
+        url('BlackerSansDisplay-Regular.woff2') format('woff2'),
+        url('BlackerSansDisplay-Regular.woff') format('woff'),
+        url('BlackerSansDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

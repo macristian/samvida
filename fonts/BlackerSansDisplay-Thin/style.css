@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Blacker Sans Display';
+    src: local('Blacker Sans Display Thin'), local('Blacker-Sans-Display-Thin'),
+        url('BlackerSansDisplay-Thin.woff2') format('woff2'),
+        url('BlackerSansDisplay-Thin.woff') format('woff'),
+        url('BlackerSansDisplay-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
