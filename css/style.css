@@ -6,6 +6,15 @@
     --dark: #555555;
 }
 
+.levitate {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.levitate:hover {
+    transform: translateY(-10px);
+}
+
 .btn {
     font-weight: 700;
     transition: .5s;
