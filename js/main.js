@@ -82,6 +82,24 @@
 
     // Price carousel
     $(".price-carousel").owlCarousel({
+        autoplay: false,
+        margin: 100,
+        dots: false,
+        loop: false,
+        nav : false,
+        responsive: {
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            }
+        }
+    });
+
+    /* Original
+    // Price carousel
+    $(".price-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
         margin: 45,
@@ -101,6 +119,7 @@
             }
         }
     });
+    */
 
 
     // Testimonials carousel
