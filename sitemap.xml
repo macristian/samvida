@@ -13,17 +13,22 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://samvidasaude.com.br/about</loc>
+  <loc>https://samvidasaude.com.br/sobre</loc>
   <lastmod>2023-10-08T14:37:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://samvidasaude.com.br/team</loc>
+  <loc>https://samvidasaude.com.br/guia-consultas</loc>
   <lastmod>2023-10-08T14:37:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://samvidasaude.com.br/price</loc>
+  <loc>https://samvidasaude.com.br/guia-exames</loc>
+  <lastmod>2023-10-08T14:37:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://samvidasaude.com.br/assinatura</loc>
   <lastmod>2023-10-15T14:37:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
