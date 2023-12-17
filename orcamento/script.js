@@ -84,6 +84,21 @@ function addProduct() {
     }
 }
 
+document.addEventListener('keydown', function (event) {
+    // Verifica se a combinação de teclas é CTRL+P (ou Command+P no Mac)
+    if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
+        clearProductNameInput();
+    }
+});
+
+// Função para limpar o campo de input texto
+function clearProductNameInput() {
+    const productNameInput = document.getElementById('productName');
+    productNameInput.value = ''; // Define o valor do campo como vazio
+    filterProducts(); // Chama a função de filtragem para atualizar a lista de produtos
+}
+
+
 
 // Função para remover um produto da lista de orçamento
 function removeProduct(index) {
@@ -134,6 +149,11 @@ function printDocument() {
     pdf.autoPrint();
 }
 
+// Função para formatar um número como moeda (R$)
+function formatCurrency(value) {
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+}
+
 // Função para exibir a tabela completa
 function displayTable() {
     const tableContainer = document.getElementById('tableContainer');
@@ -149,9 +169,17 @@ function displayTable() {
         for (let col = 0; col < Object.keys(selectedItems[row]).length; col++) {
             const td = document.createElement('td');
             const key = Object.keys(selectedItems[row])[col];
-            td.textContent = selectedItems[row][key];
+
+            // Verifica se a coluna é a de "Preço" e aplica a formatação de moeda
+            if (key === 'preco') {
+                td.textContent = formatCurrency(selectedItems[row][key]);
+            } else {
+                td.textContent = selectedItems[row][key];
+            }
+
             tr.appendChild(td);
         }
+
         const removeTd = document.createElement('td');
         const removeButton = document.createElement('button');
         removeButton.textContent = 'X';
@@ -166,12 +194,12 @@ function displayTable() {
     // Adiciona a soma dos valores da coluna "Preço"
     const totalRow = document.createElement('tr');
     const totalLabel = document.createElement('td');
-    totalLabel.textContent = 'TOTAL COM DESCONTOS (R$)';
+    totalLabel.textContent = 'TOTAL COM DESCONTOS SAMVIDA';
     totalLabel.style.fontWeight = 'bold'; // Adiciona negrito ao texto
     totalLabel.setAttribute('colspan', Object.keys(selectedItems[0]).length - 1); // Desconsidera a coluna "Ação"
     const totalPrice = selectedItems.reduce((acc, val) => acc + val.preco || 0, 0); // Soma dos valores da coluna "Preço"
     const totalValue = document.createElement('td');
-    totalValue.textContent = totalPrice.toFixed(2);
+    totalValue.textContent = formatCurrency(totalPrice); // Aplica formatação de moeda
     totalValue.style.fontWeight = 'bold'; // Adiciona negrito ao valor
     totalRow.appendChild(totalLabel);
     totalRow.appendChild(totalValue);
