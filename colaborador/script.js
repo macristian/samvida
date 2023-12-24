@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     }
 
     // Leitura do arquivo CSV
-    Papa.parse("/db/auth.csv", {
+    Papa.parse("../colaborador/db/auth.csv", {
         download: true,
         complete: function (results) {
             var data = results.data;
@@ -26,7 +26,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
             }
 
             if (authenticated) {
-                window.location.href = "/sistemas";
+                window.location.href = "../colaborador/sistemas";
             } else {
                 document.getElementById("errorMessage").innerText = "Usuário ou senha inválidos. Entre em contato com o administrador.";
             }
