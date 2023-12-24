@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <noscript>Você precisa ativar o JavaScript para o sistema funcionar</noscript>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/whatsapp2.png" class="card-img-top" alt="WorkLab">
+                        <label for="ddd" class="form-label">Selecione o DDD:</label>
+                        <select id="ddd" class="form-select mb-3">
+                            <!-- Códigos DDD do Brasil -->
+                            <option value="82">82</option>
+                        </select>
+
+                        <label for="phoneNumber" class="form-label">Digite o número de telefone:</label>
+                        <input type="text" id="phoneNumber" maxlength="9" class="form-control mb-3" placeholder="Digite o número"
+                            oninput="maskPhoneNumber()">
+
+                        <button onclick="generateWhatsAppLink()" class="btn btn-primary mb-3">Gerar Link do
+                            WhatsApp <i class="fa fa-whatsapp"></i></button>
+
+                        <div id="whatsappLink"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/worklab.png" class="card-img-top" alt="WorkLab">
+                        <div class="card-body">
+                            <h5 class="card-title">WorkLab Web</h5>
+                            <p class="card-text">Use este sistema para consultar e gerar orçamento de exames.</p>
+                            <a href="https://worklabweb.com.br/" target="_blank" class="btn btn-primary">Acessar <i
+                                    class="fa fa-paper-plane-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/novaimagem.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Orçamentos de Exames</h5>
+                            <p class="card-text">Acesse um sistema para capturar um comprovante de residência.</p>
+                            <a href="https://samvida.org.br/orcamento" target="_blank" class="btn btn-primary">Acessar <i
+                                    class="fa fa-paper-plane-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/targetweb.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Target Web</h5>
+                            <p class="card-text">Use este sistema para consultar e imprimir laudo histopatológicos,
+                                imunológicos e citológicos.</p>
+                            <a href="https://www.olaudo.com.br/" target="_blank" class="btn btn-primary">Acessar <i
+                                    class="fa fa-paper-plane-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/cielo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cielo SuperLink</h5>
+                            <p class="card-text">Use este sistema para realizar pagamentos via cartão de crédito.</p>
+                            <a href="https://cielolink.com.br/485Uxi2" target="_blank" class="btn btn-primary">Acessar
+                                <i class="fa fa-paper-plane-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/planilha_leads.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Planilhas de Controle</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                            <a href="https://docs.google.com/spreadsheets/d/1KJ4OVIVyZT5kSz8NSZ5WqC3VkvFQEna637IaTNK4bCI/edit#gid=0"
+                                target="_blank" class="btn btn-primary">Acessar <i class="fa fa-paper-plane-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/zoho.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Email Corporativo</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                            <a href="https://mail.zoho.com/" target="_blank" class="btn btn-primary">Acessar <i
+                                    class="fa fa-paper-plane-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/equatorial.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Comprovante de Residência</h5>
+                            <p class="card-text">Acesse um sistema para capturar um comprovante de residência.</p>
+                            <a href="https://al.equatorialenergia.com.br/sua-conta/emitir-segunda-via/" target="_blank" class="btn btn-primary">Acessar <i
+                                    class="fa fa-paper-plane-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function generateWhatsAppLink() {
+            var ddd = document.getElementById("ddd").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var whatsappLink = document.getElementById("whatsappLink");
+
+            var cleanPhoneNumber = phoneNumber.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+            // Verifica se o número começa com 9
+            if (/^9/.test(cleanPhoneNumber)) {
+                var link = "https://wa.me/55" + ddd + cleanPhoneNumber;
+
+                var linkElement = document.createElement("a");
+                linkElement.href = link;
+                linkElement.textContent = "Clique para enviar mensagem no WhatsApp";
+                linkElement.target = "_blank"; // Adiciona a propriedade target="_blank"
+
+                whatsappLink.innerHTML = "";
+                whatsappLink.appendChild(linkElement);
+            } else {
+                whatsappLink.innerHTML = "Por favor, insira um número de telefone válido, começando com 9.";
+            }
+        }
+
+        function maskPhoneNumber() {
+            var phoneNumberInput = document.getElementById("phoneNumber");
+            var cleanedValue = phoneNumberInput.value.replace(/\D/g, '');
+
+            // Aplica a máscara 9.9999-9999
+            if (cleanedValue.length > 0) {
+                phoneNumberInput.value = cleanedValue.replace(/^(\d{1})(\d{4})(\d{4})$/, '$1.$2-$3');
+            }
+        }
+    </script>
+    <script src="/laudo/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
