@@ -9,32 +9,37 @@
 
 <url>
   <loc>https://samvida.org.br/</loc>
-  <lastmod>2023-10-29T20:59:33+00:00</lastmod>
+  <lastmod>2024-01-02T16:35:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://samvida.org.br/sobre</loc>
-  <lastmod>2023-10-29T20:59:33+00:00</lastmod>
+  <lastmod>2024-01-02T16:35:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://samvida.org.br/guia-consultas</loc>
-  <lastmod>2023-10-29T20:59:33+00:00</lastmod>
+  <lastmod>2024-01-02T16:35:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://samvida.org.br/guia-exames</loc>
-  <lastmod>2023-10-29T20:59:33+00:00</lastmod>
+  <lastmod>2024-01-02T16:35:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://samvida.org.br/assinatura</loc>
-  <lastmod>2023-10-29T20:59:33+00:00</lastmod>
+  <lastmod>2024-01-02T16:35:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://samvida.org.br/contato</loc>
-  <lastmod>2023-10-29T20:59:33+00:00</lastmod>
+  <lastmod>2024-01-02T16:35:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://samvida.org.br/colaborador</loc>
+  <lastmod>2024-01-02T16:35:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
