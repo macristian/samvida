@@ -33,7 +33,7 @@
         <p>End.: Rua Santos Pacheco, 94 Centro Maceio-AL CEP: 57020-290</p>
         <p>Ligue grátis: 0800 484 4488</p>
         <br>
-        <h4>Orçamento</h4>
+        <h4>Orçamento <div id="currentDateDiv"></div></h4>
 
         <div class="form-row">
             <div class="form-group">
@@ -63,6 +63,25 @@
   -->
 
         <div id="tableContainer"></div>
+
+        <script>
+            function updateCurrentDate() {
+                var now = new Date();
+                var formattedDate = now.toLocaleString('pt-BR', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                });
+
+                document.getElementById("currentDateDiv").innerHTML = formattedDate;
+            }
+
+            // Atualiza a data na página a cada segundo
+            setInterval(updateCurrentDate, 1000);
+
+            // Atualiza a data na página ao carregar
+            window.onload = updateCurrentDate;
+        </script>
 
         <p>*Orçamento válido por 15 dias. Preços e condições apenas para assinantes do Programa de Assistência em Saúde
             Samvida. Consulte regulamento no site www.samvida.org.br</p>
